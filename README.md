@@ -1,2 +1,3 @@
 # TorrentTrader
-Torrent Trader 2.08 published source code.
+
+Refactoring of the TorrentTrader project in Composer with PHP 7.
