@@ -1,17 +1,15 @@
-TORRENTTRADER FEATURES LIST 
-    $LastChangedDate: 2010-02-14 02:09:26 +0000 (Sun, 14 Feb 2010) $
-=================================
+# TorrentTrader Features
 
 Here is a basic rundown on the features, there is many more than listed here...
 
-Tracker Features:
+### Tracker Features:
 - External torrents tracking
 - Tracking now by passkey!
-- Fully themeable
+- Easy to add themes
 - "completed by" information on all local torrents
 - User Agent (Client) detection
 - 14 Languages included
-- optimised announce.php and scrape.php codes
+- Optimised announce.php and scrape.php codes
 - Site polls
 - Enhanced Torrents comments with user stats
 - Advanced Site statistics
@@ -20,14 +18,14 @@ Tracker Features:
 - Ban Emails
 - Server load and SQL statistics
 - Advanced RSS Feed For torrents and categories
-- new Shoutbox
+- New Shout box
 - Customisable blocks
 - Sub categories
 - Uploader teams
 - Invite system
 
 
-Admin Features:
+### Admin Features:
 - Admin only, confirm user registration option
 - Ability for staff to reset user passwords
 - Private message "spy"
@@ -35,7 +33,7 @@ Admin Features:
 - Customisable FAQ
 - Customisable Rules
 - Moderator Edit/Delete comments
-- new Site news system, with comments
+- New Site news system, with comments
 - Site welcome msg/notice
 - Ratio Based Wait Times and auto warn system
 - New User warnings system
@@ -45,23 +43,9 @@ Admin Features:
 - Mass PM System with selectable reciever groups
 - User search
 
-User Features:
+### User Features:
 - Anonymous uploading of torrents
 - Editable User titles
 - Signatures viewable on Forums + Comments pages
 - Privacy option in UserCP to hide certain stats from forums/comments
 - Edit own torrent comments
-
-
-!!!WHATS NOT INCLUDED!!!
-========================
-As default the following is not included (check www.torrenttrader.org for future updates)
-
-Torrent Offers
-Torrent Requests
-Comment History
-Forums
-Arcade
-IRC Announce
-JAVA Chat
--more...
