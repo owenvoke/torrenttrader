@@ -1,0 +1,11 @@
+{
+  "name": "pxgamer/torrenttrader-php7",
+  "description": "Refactoring of the TorrentTrader project in Composer with PHP 7.",
+  "minimum-stability": "stable",
+  "license": "GPL-2.0",
+  "autoload": {
+    "psr-4": {
+      "pxgamer\\TorrentTrader": "src/"
+    }
+  }
+}
