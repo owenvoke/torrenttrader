@@ -6,9 +6,9 @@
 
 ### INSTALLATION:
 1) Copy ALL files to your web server
-2) Import the database using the file '[/resources/database.sql](../resources/database.sql)'
-3) Edit the file backend/mysql.php to suit your database connection
-4) Edit the file backend/config.php to suit your needs
+2) Import the database using the file [`/resources/database.sql`](../resources/database.sql)
+3) Edit the file `backend/mysql.php` to suit your database connection
+4) Edit the file `backend/config.php` to suit your needs
     - Special note should be taken for urls, emails, paths (use check.php if unsure)
 5) Apply the following CHMOD's
     777 - cache/
