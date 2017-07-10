@@ -7,6 +7,6 @@ use pxgamer\TorrentTrader\Template;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <meta name="theme-color" content="#ffffff">
-    <script src="/assets/<?= $_ENV['DEFAULT_THEME'] ?>/js/application.min.js"></script>
-    <link rel="stylesheet" href="/assets/<?= $_ENV['DEFAULT_THEME'] ?>/css/styles.min.css">
+    <script src="/assets/js/application.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/styles.min.css">
 </head>
