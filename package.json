@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "devDependencies": {
+    "jquery": "^2.2.4",
+    "bootstrap-sass": "^3.3.7"
+  },
+  "scripts": {
+    "build": "scss.bat --no-cache -t compressed --update ./resources/assets/sass/app.scss:./public/assets/css/app.css"
+  }
+}
