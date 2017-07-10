@@ -4,11 +4,14 @@
     "jquery": "^2.2.4",
     "bootstrap-sass": "^3.3.7",
     "browserify": "^14.4.0",
-    "node-sass": "^4.5.3"
+    "node-sass": "^4.5.3",
+    "font-awesome": "^4.7.0"
   },
   "scripts": {
+    "first-time-setup": "npm run build && npm run build:move-fonts",
     "build": "npm run build:sass && npm run build:js",
     "build:sass": "node-sass --source-map=true resources/assets/sass/app.scss public/assets/css/app.css",
-    "build:js": "browserify resources/assets/js/app.js -o public/assets/js/app.js"
+    "build:js": "browserify resources/assets/js/app.js -o public/assets/js/app.js",
+    "build:fonts": "cp -R node_modules/font-awesome/fonts/* public/assets/fonts/"
   }
 }
