@@ -1,4 +1,4 @@
 vendor/
 config/.env
-assets/css/styles.min.css
-assets/js/application.min.js
+assets/css/app.css
+assets/js/app.js
