@@ -6,3 +6,5 @@ require_once('../vendor/autoload.php');
 $bootstrap = new Bootstrap();
 
 $bootstrap->loadEnvParams();
+
+$bootstrap->loadRouting();
