@@ -9,5 +9,9 @@
     </div>
     <div class="alert alert-warning">
         <div class="alert-link"><?= $e->getMessage() ?></div>
+
+        <?php if ($_ENV['DEVELOPMENT_MODE'] === true || $_ENV['DEVELOPMENT_MODE'] === 'true') { ?>
+            <pre><?= $e->getTraceAsString() ?></pre>
+        <?php } ?>
     </div>
 </div>
