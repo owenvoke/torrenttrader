@@ -17,7 +17,7 @@ class Output
         $this->m_aHeaders = array();
         $this->m_sBody = '';
         $this->m_sStatus = self::HTTP_OK;
-        $this->m_sContentType = 'text/html; charset=UTF-8';
+        $this->m_sContentType = 'text/html; charset=' . ($_ENV['CHARSET'] ?? 'UTF-8');
         $this->m_aViewVariables = array();
     }
 
