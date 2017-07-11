@@ -5,6 +5,7 @@ namespace pxgamer\TorrentTrader\Configuration;
 use Dotenv\Dotenv;
 use Dotenv\Exception\ValidationException;
 use pxgamer\TorrentTrader\Template\Output;
+use System;
 
 class Bootstrap
 {
@@ -107,19 +108,39 @@ class Bootstrap
         }
     }
 
+    public function loadRouting()
+    {
+        $app = System\App::instance();
+        $app->request = System\Request::instance();
+        $router = $app->route = System\Route::instance($app->request);
+
+        $routes = new Routes();
+
+        $router = $routes->addRoutes($router);
+
+        $router->end();
+    }
+
     public function error($error_code, $exception)
     {
         $output = new Output();
 
         $output->setViewVariable('e', $exception);
 
+        if (!is_numeric($error_code)) {
+            $error_code = 'default';
+        }
+
+        $error_file = __DIR__ . '/../../templates/errors/' . $error_code . '.html.php';
+
         $output->renderTemplate(
             [
-                'file' => __DIR__ . '/../../templates/errors/' . $error_code . '.html.php',
+                'file' => $error_file,
                 'template' => true
             ]
         );
 
         $output->send();
+        die;
     }
 }
