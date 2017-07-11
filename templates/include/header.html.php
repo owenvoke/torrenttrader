@@ -1,9 +1,10 @@
 <?php
-use pxgamer\TorrentTrader\Template;
-
+/**
+ * @var string $sTitle
+ */
 ?>
 <head>
-    <title><?= Template\Meta::getTitle() ?></title>
+    <title><?= $_ENV['SITE_NAME'] . (isset($sTitle) ? ': ' . $sTitle : null) ?></title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <meta name="theme-color" content="#ffffff">
