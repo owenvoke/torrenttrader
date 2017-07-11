@@ -1,3 +1,9 @@
+<?php
+/**
+ * @var array $aDirectoriesWritable
+ * @var array $aPhpRecommendedSettings
+ */
+?>
 <div class="container-fluid">
     <div class="page-header">
         <h2><?= $_ENV['SITE_NAME'] ?> Config Check</h2>
@@ -12,56 +18,96 @@
     <p>This system check is designed for unix based servers, windows based servers may not give desired results.</p>
 
     <table class="table table-bordered">
+        <colgroup>
+            <col width="500px"/>
+            <col/>
+        </colgroup>
+
         <tr>
             <td>PHP version >= 7.0</td>
             <td>
-                <?= phpversion() > '7.0' ? '<strong><span class="text-danger">Yes</span></strong>' : '<strong><span class="text-danger">No</span> - 7.0 or above required</strong>'; ?>
+                <?= phpversion() > '7.0' ?
+                    '<strong><span class="text-success">Yes</span></strong>' :
+                    '<strong><span class="text-danger">No</span> - 7.0 or above required</strong>' ?>
                 - Your PHP version is <em><?= phpversion() ?></em>.
             </td>
         </tr>
 
         <tr>
-            <td>- zlib compression support</td>
-            <td><?= extension_loaded('zlib') ? '<strong><span class="text-success">Available</span></strong>' : '<strong><span class="text-danger">Unavailable</span></strong>'; ?></td>
+            <td>
+                <span>- ZLib Compression support</span>
+                <a href="https://php.net/manual/en/book.zlib.php" target="_blank" class="fa fa-fw fa-info"></a>
+            </td>
+            <td><?= extension_loaded('zlib') ?
+                    '<strong><span class="text-success">Available</span></strong>' :
+                    '<strong><span class="text-danger">Unavailable</span></strong>' ?></td>
         </tr>
 
         <tr>
-            <td>- XML support</td>
-            <td><?= extension_loaded('xml') ? '<strong><span class="text-success">Available</span></strong>' : '<strong><span class="text-danger">Unavailable</span></strong>'; ?></td>
+            <td>
+                <span>- XML support</span>
+                <a href="https://php.net/manual/en/book.xml.php" target="_blank" class="fa fa-fw fa-info"></a>
+            </td>
+            <td><?= extension_loaded('xml') ?
+                    '<strong><span class="text-success">Available</span></strong>' :
+                    '<strong><span class="text-danger">Unavailable</span></strong>' ?></td>
         </tr>
 
         <tr>
-            <td>- PDO support</td>
-            <td><?= class_exists('PDO') ? '<strong><span class="text-success">Available</span></strong>' : '<strong><span class="text-danger">Unavailable</span></strong>'; ?></td>
+            <td>
+                <span>- PDO support</span>
+                <a href="https://php.net/manual/en/book.pdo.php" target="_blank" class="fa fa-fw fa-info"></a>
+            </td>
+            <td><?= class_exists('PDO') ?
+                    '<strong><span class="text-success">Available</span></strong>' :
+                    '<strong><span class="text-danger">Unavailable</span></strong>' ?></td>
         </tr>
 
         <tr>
-            <td>- curl support (Not required but external torrents may scrape faster)</td>
-            <td><?= function_exists('curl_init') ? '<strong><span class="text-success">Available</span></strong>' : '<strong><span class="text-danger">Unavailable</span></strong>'; ?></td>
+            <td>
+                <span>- cURL support</span>
+                <a href="https://php.net/manual/en/book.curl.php" target="_blank" class="fa fa-fw fa-info"></a>
+            </td>
+            <td><?= function_exists('curl_init') ?
+                    '<strong><span class="text-success">Available</span></strong>' :
+                    '<strong><span class="text-danger">Unavailable</span></strong>' ?></td>
         </tr>
 
         <tr>
-            <td>- gmp support (Required for IPv6)</td>
-            <td><?= extension_loaded('gmp') ? '<strong><span class="text-success">Available</span></strong>' : '<strong><span class="text-danger">Unavailable</span></strong>'; ?></td>
+            <td>
+                <span>- GMP support (for IPV6)</span>
+                <a href="https://php.net/manual/en/book.gmp.php" target="_blank" class="fa fa-fw fa-info"></a>
+            </td>
+            <td><?= extension_loaded('gmp') ?
+                    '<strong><span class="text-success">Available</span></strong>' :
+                    '<strong><span class="text-danger">Unavailable</span></strong>' ?></td>
         </tr>
 
         <tr>
-            <td>- bcmath support (Required for IPv6)</td>
-            <td><?= extension_loaded('bcmath') ? '<strong><span class="text-success">Available</span></strong>' : '<strong><span class="text-danger">Unavailable</span></strong>'; ?></td>
+            <td>
+                <span>- BC Math support (for IPV6)</span>
+                <a href="https://php.net/manual/en/book.bc.php" target="_blank" class="fa fa-fw fa-info"></a>
+            </td>
+            <td><?= extension_loaded('bcmath') ?
+                    '<strong><span class="text-success">Available</span></strong>' :
+                    '<strong><span class="text-danger">Unavailable</span></strong>' ?></td>
         </tr>
 
         <tr>
-            <td>- hash_hmac support (Recommended - For better password encryption)</td>
-            <td><?= function_exists('hash_hmac') ? '<strong><span class="text-success">Available</span></strong>' : '<strong><span class="text-danger">Unavailable</span></strong>'; ?></td>
+            <td>
+                <span>- <code>password_*</code> support</span>
+                <a href="https://php.net/manual/en/book.password.php" target="_blank" class="fa fa-fw fa-info"></a>
+            </td>
+            <td><?= function_exists('password_hash') ?
+                    '<strong><span class="text-success">Available</span></strong>' :
+                    '<strong><span class="text-danger">Unavailable</span></strong>' ?></td>
         </tr>
 
         <tr>
-            <td>- suhosin extension (Optional)</td>
-            <td><?= extension_loaded('suhosin') ? '<strong><span class="text-success">Available</span></strong><br /><br />Add to your php.ini (otherwise you may have issues):<br />suhosin.get.disallow_nul = Off<br />suhosin.request.disallow_nul = Off' : '<strong><span class="text-danger">Unavailable</span></strong>'; ?></td>
-        </tr>
-
-        <tr>
-            <td>config/.env</td>
+            <td>
+                <span><code>config/.env</code></span>
+                <a href="https://12factor.net/config" target="_blank" class="fa fa-fw fa-info"></a>
+            </td>
             <td>
                 <?php
                 if (!file_exists(ROOT_PATH . 'config/.env')) {
@@ -75,33 +121,28 @@
 
         <tr>
             <td>Document Root</td>
-            <td><?= ROOT_PATH ?></td>
+            <td><code><?= ROOT_PATH ?></code></td>
         </tr>
     </table>
 
     <p>These settings are recommended for PHP in order to ensure full compatibility with <?= $_ENV['SITE_NAME'] ?>!.
         However, <?= $_ENV['SITE_NAME'] ?>! will still operate if your settings do not quite match the recommended.</p>
 
-    <table class="table">
+    <table class="table table-bordered">
+        <colgroup>
+            <col width="500px"/>
+            <col width="500px"/>
+            <col/>
+        </colgroup>
+
         <tr>
-            <th width="500px">Directive</th>
+            <th>Directive</th>
             <th>Recommended</th>
             <th>Actual</th>
         </tr>
 
         <?php
-        $php_recommended_settings = [
-            ['Safe Mode', 'safe_mode', 'OFF'],
-            ['Display Errors (Can be off, but does make debugging difficult.)', 'display_errors', 'ON'],
-            ['File Uploads', 'file_uploads', 'ON'],
-            ['Magic Quotes Runtime', 'magic_quotes_runtime', 'OFF'],
-            ['Register Globals', 'register_globals', 'OFF'],
-            ['Output Buffering', 'output_buffering', 'OFF'],
-            ['Session auto start', 'session.auto_start', 'OFF'],
-            ['allow_url_fopen (Required for external torrents)', 'allow_url_fopen', 'ON']
-        ];
-
-        foreach ($php_recommended_settings as $php_setting) {
+        foreach ($aPhpRecommendedSettings as $php_setting) {
             ?>
             <tr>
                 <td><?= $php_setting[0] ?></td>
@@ -128,18 +169,20 @@
     </p>
 
     <table class="table table-bordered table-striped">
+        <colgroup>
+            <col width="500px"/>
+            <col width="500px"/>
+            <col/>
+        </colgroup>
+
         <tr>
-            <th width="500px">Directive</th>
-            <th>Recommended</th>
-            <th>Actual</th>
+            <th>Directory</th>
+            <th>Exists</th>
+            <th>Writable</th>
         </tr>
+
         <?php
-        $directories = [
-            'resources/backups',
-            'uploads/images',
-            'resources/ache',
-        ];
-        foreach ($directories as $directory) {
+        foreach ($aDirectoriesWritable as $directory) {
             ?>
             <tr>
                 <td><?= $directory ?></td>
