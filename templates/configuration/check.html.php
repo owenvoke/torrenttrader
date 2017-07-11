@@ -109,13 +109,11 @@
                 <a href="https://12factor.net/config" target="_blank" class="fa fa-fw fa-info"></a>
             </td>
             <td>
-                <?php
-                if (!file_exists(ROOT_PATH . 'config/.env')) {
-                    echo '<strong><span class="text-danger">No Config Exists</span></strong><br />Warning: No config exists.';
-                } else {
-                    echo '<strong><span class="text-success">Config Exists</span></strong>';
-                }
-                ?>
+                <?php if (!file_exists(ROOT_PATH . 'config/.env')) { ?>
+                    <strong><span class="text-danger">No Config Exists</span></strong>
+                <?php } else { ?>
+                    <strong><span class="text-success">Config Exists</span></strong>
+                <?php } ?>
             </td>
         </tr>
 
