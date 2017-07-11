@@ -5,7 +5,7 @@
 ?>
 <div class="container">
     <div class="page-header">
-        <h1>Error 500</h1>
+        <h1>Error <?= $e->getCode() ?></h1>
     </div>
     <div class="alert alert-warning">
         <div class="alert-link"><?= $e->getMessage() ?></div>
