@@ -25,10 +25,10 @@ class Output
     {
         extract($this->m_aViewVariables);
 
-        if (isset($p_aOptions['template']) && $p_aOptions['template']) {
+        if ($p_aOptions['template'] ?? false) {
             $sContent = $p_aOptions['file'];
             $this->checkTemplateExists($sContent);
-            $sFile = '../templates/template.html.php';
+            $sFile = ROOT_PATH . 'templates/template.html.php';
         } else {
             $sFile = $p_aOptions['file'];
         }
@@ -48,17 +48,16 @@ class Output
 
     public function send()
     {
-        //set status
         if (!is_null($this->m_sStatus)) {
             header($this->m_sStatus);
         }
-        //set headers
+
         foreach ($this->m_aHeaders as $sKey => $sValue) {
             header("$sKey: $sValue");
         }
-        //set content type
+
         header("Content-type: " . $this->m_sContentType);
-        //output body
+
         echo $this->m_sBody;
     }
 
