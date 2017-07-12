@@ -7,6 +7,10 @@
 
 include __DIR__ . '/include/header.html.php';
 
+if (!($sMaintenanceText ?? null)) {
+    include __DIR__ . '/include/navigation.html.php';
+}
+
 /** @noinspection PhpIncludeInspection */
 include($sContent);
 
