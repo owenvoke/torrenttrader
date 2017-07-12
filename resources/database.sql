@@ -433,7 +433,7 @@ CREATE TABLE `messages` (
   `msg`      TEXT,
   `unread`   ENUM ('yes', 'no')                              NOT NULL DEFAULT 'yes',
   `poster`   BIGINT(20) UNSIGNED                             NOT NULL DEFAULT '0',
-  `subject`  TEXT                                            NOT NULL DEFAULT '',
+  `subject`  TEXT                                            NOT NULL,
   `location` ENUM ('in', 'out', 'both', 'draft', 'template') NOT NULL DEFAULT 'in',
   PRIMARY KEY (`id`),
   KEY `receiver` (`receiver`)
@@ -849,7 +849,7 @@ CREATE TABLE `forumcats` (
 DROP TABLE IF EXISTS `sqlerr`;
 CREATE TABLE `sqlerr` (
   `id`   INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `txt`  TEXT             NOT NULL DEFAULT '',
+  `txt`  TEXT             NOT NULL,
   `time` DATETIME         NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
 )
