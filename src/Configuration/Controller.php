@@ -36,4 +36,21 @@ class Controller extends Configuration\BaseController
 
         $this->output->send();
     }
+
+    public function maintenance()
+    {
+        // Set page title
+        $this->output->setViewVariable('sTitle', 'Maintenance');
+
+        // Set maintenance mode output
+        $this->output->setViewVariable('sMaintenanceText', 'Maintenance Mode is currently active. Please check back shortly.');
+
+        $this->output->renderTemplate([
+            'file' => ROOT_PATH . 'templates/configuration/maintenance.html.php',
+            'template' => true
+        ]);
+
+        $this->output->send();
+        die();
+    }
 }
