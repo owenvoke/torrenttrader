@@ -9,6 +9,7 @@
     }
   },
   "require": {
+    "php": "^7.0",
     "vlucas/phpdotenv": "2.4.*",
     "coldwinds/torrent-rw": "^1.1",
     "nezamy/route": "^1.0.3"
