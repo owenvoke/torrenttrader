@@ -18,6 +18,8 @@ class Routes
             $router->any('/check', ['\pxgamer\TorrentTrader\Configuration\Controller', 'index']);
         }
 
+        $router->any('/', ['\pxgamer\TorrentTrader\Welcome\Controller', 'index']);
+
         return $router;
     }
 }
