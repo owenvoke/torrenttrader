@@ -17,6 +17,46 @@
         </div>
 
         <div class="collapse navbar-collapse" id="tt-main-navbar">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/torrents">
+                        <span class="fa fa-fw fa-shopping-bag"></span>
+                        <span>Torrents</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/community">
+                        <span class="fa fa-fw fa-comment"></span>
+                        <span>Community</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/faq">
+                        <span class="fa fa-fw fa-info"></span>
+                        <span>FAQ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/torrents/search">
+                        <span class="fa fa-fw fa-search"></span>
+                        <span>Search</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/account/register">
+                        <span class="fa fa-fw fa-user-plus"></span>
+                        <span>Register</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/account/sign_in">
+                        <span class="fa fa-fw fa-sign-in"></span>
+                        <span>Sign In</span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
