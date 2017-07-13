@@ -19,6 +19,7 @@ class Routes
         }
 
         $router->any('/', ['\pxgamer\TorrentTrader\Welcome\Controller', 'index']);
+        $router->any('/dmca', ['\pxgamer\TorrentTrader\Welcome\Controller', 'dmca']);
 
         return $router;
     }

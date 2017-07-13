@@ -25,4 +25,19 @@ class Controller extends BaseController
 
         $this->output->send();
     }
+
+    public function dmca()
+    {
+        if (!$_ENV['DMCA_COMPLIANT']) {
+            header('Location: /');
+            die();
+        }
+
+        $this->output->renderTemplate([
+            'file' => ROOT_PATH . 'templates/welcome/dmca.html.php',
+            'template' => true
+        ]);
+
+        $this->output->send();
+    }
 }
