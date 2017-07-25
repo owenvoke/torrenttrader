@@ -6,6 +6,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": "^7.0",
+        "coldwinds/torrent-rw": "^1.1",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0"
     },
