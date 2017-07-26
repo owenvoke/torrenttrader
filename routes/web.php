@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Torrents
+Route::get('/torrents', 'TorrentController@index');
+Route::get('/torrents/{torrent}', 'TorrentController@show');
