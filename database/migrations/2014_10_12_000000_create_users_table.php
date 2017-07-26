@@ -63,7 +63,7 @@ class CreateUsersTable extends Migration
             $table->index('country', 'country');
             $table->index('downloaded', 'downloaded');
             $table->index('ip', 'ip');
-            $table->index('status_added', 'status_added');
+            $table->index(['status', 'added'], 'status_added');
             $table->index('uploaded', 'uploaded');
             $table->index('username', 'username');
 
