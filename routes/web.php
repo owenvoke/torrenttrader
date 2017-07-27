@@ -18,3 +18,7 @@ Route::get('/', function () {
 // Torrents
 Route::get('/torrents', 'TorrentController@index');
 Route::get('/torrents/{torrent}', 'TorrentController@show');
+
+// Groups
+Route::get('/groups', 'GroupController@index');
+Route::get('/groups/{group}', 'GroupController@show');
