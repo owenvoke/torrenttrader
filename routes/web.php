@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'TorrentController@index')->name('index');
 
 // Torrents
-Route::get('/torrents', 'TorrentController@index');
-Route::get('/torrents/{torrent}', 'TorrentController@show');
+Route::resource('torrents', 'TorrentController');
 
 // Groups
-Route::get('/groups', 'GroupController@index');
-Route::get('/groups/{group}', 'GroupController@show');
+Route::resource('groups', 'GroupController');
+
+// Authenticated only routes
+Route::group(['middleware' => ['auth']], function () {
+});
