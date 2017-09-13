@@ -22,3 +22,6 @@ Route::resource('groups', 'GroupController');
 // Authenticated only routes
 Route::group(['middleware' => ['auth']], function () {
 });
+
+// Authentication
+Auth::routes();
