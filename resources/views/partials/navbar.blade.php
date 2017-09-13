@@ -23,6 +23,10 @@
             </form>
 
             <ul class="nav navbar-nav navbar-right">
+
+                {{-- Navbar Dropdown/Link Elements --}}
+                @include('partials.navbar.torrents')
+
                 @auth
                     <li>
                         <p class="navbar-text">
