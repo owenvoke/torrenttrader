@@ -20,7 +20,6 @@ class CreateTorrentsTable extends Migration
             $table->text('description');
             $table->bigInteger('category');
             $table->bigInteger('size');
-            $table->dateTime('added');
             $table->bigInteger('downloads');
 
             $table->timestamps();
