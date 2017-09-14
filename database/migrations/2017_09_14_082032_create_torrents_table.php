@@ -15,12 +15,13 @@ class CreateTorrentsTable extends Migration
     {
         Schema::create('torrents', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('info_hash', 40);
+            $table->string('info_hash', 40)->unique();
             $table->string('name', 500);
-            $table->text('description');
-            $table->bigInteger('category');
-            $table->bigInteger('size');
-            $table->bigInteger('downloads');
+            $table->text('description')->default('');
+            $table->bigInteger('category')->default(1);
+            $table->bigInteger('size')->default(0);
+            $table->bigInteger('downloads')->default(0);
+            $table->bigInteger('user')->default(0);
 
             $table->timestamps();
         });
