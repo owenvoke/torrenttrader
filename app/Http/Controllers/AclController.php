@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Group;
+use App\Acl;
 use Illuminate\Http\Request;
 
-class GroupController extends Controller
+class AclController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class GroupController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Group  $group
+     * @param  \App\Acl  $group
      * @return \Illuminate\Http\Response
      */
-    public function show(Group $group)
+    public function show(Acl $group)
     {
         //
     }
@@ -52,10 +52,10 @@ class GroupController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Group  $group
+     * @param  \App\Acl  $group
      * @return \Illuminate\Http\Response
      */
-    public function edit(Group $group)
+    public function edit(Acl $group)
     {
         //
     }
@@ -64,10 +64,10 @@ class GroupController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Group  $group
+     * @param  \App\Acl  $group
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Group $group)
+    public function update(Request $request, Acl $group)
     {
         //
     }
@@ -75,10 +75,10 @@ class GroupController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Group  $group
+     * @param  \App\Acl  $group
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Group $group)
+    public function destroy(Acl $group)
     {
         //
     }
