@@ -9,7 +9,9 @@
     <div class="collapse navbar-collapse" id="main-nav">
 
         <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <input class="form-control mr-sm-2" type="text"
+                   placeholder="@lang('navigation.search')"
+                   aria-label="@lang('navigation.search')">
             <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">
                 <span class="fa fa-fw fa-search"></span>
             </button>
@@ -31,7 +33,7 @@
                     <a href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                            document.getElementById('logout-form').submit();">
-                        <span>Logout</span>
+                        <span>@lang('navigation.logout')</span>
                     </a>
 
                     <form id="logout-form" action="{{ route('logout') }}"
@@ -42,10 +44,14 @@
             @endauth
             @guest
                 <div class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}">Sign Up</a>
+                    <a class="nav-link" href="{{ route('register') }}">
+                        <span>@lang('navigation.sign_up')</span>
+                    </a>
                 </div>
                 <div class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">Log In</a>
+                    <a class="nav-link" href="{{ route('login') }}">
+                        <span>@lang('navigation.log_in')</span>
+                    </a>
                 </div>
             @endguest
         </form>
