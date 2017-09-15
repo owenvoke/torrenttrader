@@ -6,6 +6,8 @@ use Faker\Generator as Faker;
 $factory->define(App\FaqCategory::class, function (Faker $faker) {
     return [
         'title' => $faker->realText(),
-        'acl' => 1
+        'acl' => function () {
+            return factory(App\Acl::class)->create()->id;
+        }
     ];
 });
