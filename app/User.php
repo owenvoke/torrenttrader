@@ -43,10 +43,18 @@ class User extends Authenticatable
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function acl()
+    {
+        return $this->hasOne('App\Acl');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function teams()
     {
-        return $this->hasMany('App\Team');
+        return $this->belongsToMany('App\Team');
     }
 }
