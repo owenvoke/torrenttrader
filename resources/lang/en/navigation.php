@@ -8,11 +8,11 @@ return [
     |--------------------------------------------------------------------------    |
     */
 
-    'search'          => 'Search',
-    'sign_up'         => 'Sign Up',
+    'browse_torrents' => 'Browse',
     'log_in'          => 'Log In',
     'logout'          => 'Logout',
+    'search'          => 'Search',
+    'sign_up'         => 'Sign Up',
     'torrents'        => 'Torrents',
-    'browse_torrents' => 'Browse',
 
 ];
