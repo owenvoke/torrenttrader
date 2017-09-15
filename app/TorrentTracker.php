@@ -2,9 +2,13 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class TorrentTracker extends Model
+/**
+ * Class TorrentTracker
+ * @package App
+ */
+class TorrentTracker extends Pivot
 {
     //
 }
