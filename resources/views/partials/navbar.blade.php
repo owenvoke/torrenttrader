@@ -19,14 +19,15 @@
             {{-- Navbar Dropdown/Link Elements --}}
             @include('partials.navbar.torrents')
 
+
             @auth
-                <li class="nav-item">
+                <div class="nav-item">
                     <p class="navbar-text">
                         <span class="fa fa-fw fa-user"></span>
                         {{ Auth::user()->name }}
                     </p>
-                </li>
-                <li class="nav-item">
+                </div>
+                <div class="nav-item">
                     <a href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                            document.getElementById('logout-form').submit();">
@@ -37,16 +38,16 @@
                           method="POST" class="hide">
                         {{ csrf_field() }}
                     </form>
-                </li>
+                </div>
             @endauth
             @guest
-                <li class="nav-item">
+                <div class="nav-item">
                     <a class="nav-link" href="{{ route('register') }}">Sign Up</a>
-                </li>
-                <li class="nav-item">
+                </div>
+                <div class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">Log In</a>
-                </li>
-                @endguest
-                </ul>
+                </div>
+            @endguest
+        </form>
     </div>
 </nav>
