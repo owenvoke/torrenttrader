@@ -18,10 +18,10 @@ class CreateTorrentsTable extends Migration
             $table->string('info_hash', 40)->unique();
             $table->string('title', 500);
             $table->text('description')->default('');
-            $table->unsignedInteger('category')->default(1);
+            $table->unsignedInteger('category_id')->default(1);
             $table->bigInteger('size')->default(0);
             $table->bigInteger('downloads')->default(0);
-            $table->unsignedInteger('user')->default(0);
+            $table->unsignedInteger('user_id')->default(0);
 
             $table->timestamps();
         });

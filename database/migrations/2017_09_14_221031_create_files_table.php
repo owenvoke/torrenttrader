@@ -15,11 +15,11 @@ class CreateFilesTable extends Migration
     {
         Schema::create('files', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('torrent');
+            $table->unsignedInteger('torrent_id');
             $table->string('path');
             $table->bigInteger('size');
 
-            $table->unique(['torrent', 'path']);
+            $table->unique(['torrent_id', 'path']);
 
             $table->timestamps();
         });

@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('username')->unique();
             $table->string('email')->unique();
             $table->string('password');
-            $table->unsignedInteger('acl');
+            $table->unsignedInteger('acl_id');
 
             $table->rememberToken();
             $table->timestamps();
