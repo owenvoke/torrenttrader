@@ -1,57 +1,52 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#navbar-main">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{{ route('index') }}">{{ config('app.name') }}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#main-nav" aria-controls="main-nav"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="main-nav">
+
+        <form class="form-inline mr-auto">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">
+                <span class="fa fa-fw fa-search"></span>
             </button>
-            <a class="navbar-brand" href="/">
-                <span class="fa fa-fw fa-play-circle-o"></span>
-                <span class="user-colour">{{ config('app.name') }}</span>
-            </a>
-        </div>
+        </form>
 
-        <div class="collapse navbar-collapse" id="navbar-main">
-            <form class="navbar-form navbar-left" action="{{ route('torrents.index') }}">
-                <div class="form-group">
-                    <input name="query" class="form-control navbar-search hover-bottom" placeholder="Search">
-                </div>
-                <button class="btn btn-default">Submit</button>
-            </form>
+        <form class="navbar-nav my-2 my-lg-0">
+            {{-- Navbar Dropdown/Link Elements --}}
+            @include('partials.navbar.torrents')
 
-            <ul class="nav navbar-nav navbar-right">
-
-                {{-- Navbar Dropdown/Link Elements --}}
-                @include('partials.navbar.torrents')
-
-                @auth
-                    <li>
-                        <p class="navbar-text">
-                            <span class="fa fa-fw fa-user"></span>
-                            {{ Auth::user()->name }}
-                        </p>
-                    </li>
-                    <li>
-                        <a href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
+            @auth
+                <li class="nav-item">
+                    <p class="navbar-text">
+                        <span class="fa fa-fw fa-user"></span>
+                        {{ Auth::user()->name }}
+                    </p>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
                            document.getElementById('logout-form').submit();">
-                            <span>Logout</span>
-                        </a>
+                        <span>Logout</span>
+                    </a>
 
-                        <form id="logout-form" action="{{ route('logout') }}"
-                              method="POST" class="hide">
-                            {{ csrf_field() }}
-                        </form>
-                    </li>
-                @endauth
-                @guest
-                    <li><a href="{{ route('register') }}">Sign Up</a></li>
-                    <li><a href="{{ route('login') }}">Log In</a></li>
+                    <form id="logout-form" action="{{ route('logout') }}"
+                          method="POST" class="hide">
+                        {{ csrf_field() }}
+                    </form>
+                </li>
+            @endauth
+            @guest
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">Log In</a>
+                </li>
                 @endguest
-            </ul>
-        </div>
+                </ul>
     </div>
 </nav>
