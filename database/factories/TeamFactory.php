@@ -6,7 +6,7 @@ use Faker\Generator as Faker;
 $factory->define(App\Team::class, function (Faker $faker) {
     return [
         'title' => $faker->unique()->colorName . ' Team',
-        'owner' => function () {
+        'user_id' => function () {
             return factory(App\User::class)->create()->id;
         }
     ];
