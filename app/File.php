@@ -10,5 +10,11 @@ use Illuminate\Database\Eloquent\Model;
  */
 class File extends Model
 {
-    //
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function torrents()
+    {
+        return $this->belongsTo('App\Torrent');
+    }
 }
