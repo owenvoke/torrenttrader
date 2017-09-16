@@ -11,10 +11,10 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function torrents()
     {
-        return $this->belongsToMany('App\Torrent');
+        return $this->hasMany('App\Torrent');
     }
 }
