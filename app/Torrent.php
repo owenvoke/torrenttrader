@@ -25,4 +25,12 @@ class Torrent extends Model
     {
         return $this->hasMany('App\TorrentTracker');
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function categories()
+    {
+        return $this->hasOne('App\Category');
+    }
 }
