@@ -11,10 +11,10 @@ use Illuminate\Database\Eloquent\Model;
 class FaqCategory extends Model
 {
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function faqs()
     {
-        return $this->belongsToMany('App\Faq');
+        return $this->hasMany('App\Faq', 'category_id');
     }
 }

@@ -11,10 +11,10 @@ use Illuminate\Database\Eloquent\Model;
 class Faq extends Model
 {
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function categories()
+    public function category()
     {
-        return $this->hasOne('App\FaqCategory');
+        return $this->belongsTo('App\FaqCategory');
     }
 }
