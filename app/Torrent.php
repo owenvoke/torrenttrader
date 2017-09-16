@@ -33,4 +33,12 @@ class Torrent extends Model
     {
         return $this->belongsTo('App\Category');
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function tags()
+    {
+        return $this->hasMany('App\TorrentTag');
+    }
 }
