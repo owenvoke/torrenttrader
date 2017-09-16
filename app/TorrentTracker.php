@@ -10,5 +10,5 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
  */
 class TorrentTracker extends Pivot
 {
-    //
+    protected $table = 'torrent_trackers';
 }
