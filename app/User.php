@@ -43,19 +43,19 @@ class User extends Authenticatable
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function acl()
     {
-        return $this->hasOne('App\Acl');
+        return $this->belongsTo('App\Acl');
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function custom_title()
     {
-        return $this->hasOne('App\CustomTitle');
+        return $this->belongsTo('App\CustomTitle');
     }
 
     /**
