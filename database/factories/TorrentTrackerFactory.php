@@ -9,7 +9,7 @@ $factory->define(App\TorrentTracker::class, function (Faker $faker) {
             return factory(App\Torrent::class)->create()->id;
         },
         'tracker_id' => function () {
-            return factory(\App\Tracker::class)->create()->id;
+            return factory(App\Tracker::class)->create()->id;
         },
         'seeds' => mt_rand(),
         'leechers' => mt_rand(),
