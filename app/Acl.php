@@ -11,10 +11,10 @@ use Illuminate\Database\Eloquent\Model;
 class Acl extends Model
 {
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function users()
     {
-        return $this->belongsToMany('App\User');
+        return $this->hasMany('App\User');
     }
 }
