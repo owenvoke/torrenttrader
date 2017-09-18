@@ -19,11 +19,11 @@ class Torrent extends Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function trackers()
     {
-        return $this->hasMany('App\TorrentTracker');
+        return $this->belongsToMany('App\Tracker', 'torrent_trackers');
     }
 
     /**
