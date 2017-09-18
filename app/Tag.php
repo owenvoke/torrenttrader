@@ -11,10 +11,10 @@ use Illuminate\Database\Eloquent\Model;
 class Tag extends Model
 {
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\hasMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function torrents()
     {
-        return $this->hasMany('App\Torrent');
+        return $this->belongsToMany('App\Torrent', 'torrent_tags');
     }
 }
