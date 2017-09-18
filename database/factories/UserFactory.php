@@ -13,6 +13,9 @@ $factory->define(App\User::class, function (Faker $faker) {
         'remember_token' => str_random(10),
         'acl_id' => function () {
             return factory(App\Acl::class)->create()->id;
+        },
+        'custom_title_id' => function () {
+            return factory(App\CustomTitle::class)->create()->id;
         }
     ];
 });
