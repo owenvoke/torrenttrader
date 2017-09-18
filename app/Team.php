@@ -11,10 +11,10 @@ use Illuminate\Database\Eloquent\Model;
 class Team extends Model
 {
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function users()
     {
-        return $this->hasMany('App\User');
+        return $this->belongsToMany('App\User', 'user_teams');
     }
 }
