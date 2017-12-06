@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 
 /**
  * Class TorrentTag.
- * @package App
  */
 class TorrentTag extends Pivot
 {

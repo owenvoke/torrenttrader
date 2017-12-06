@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+/* @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\File::class, function (Faker $faker) {
     return [
         'torrent_id' => function () {

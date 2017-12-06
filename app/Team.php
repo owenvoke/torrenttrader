@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Team.
- * @package App
  */
 class Team extends Model
 {

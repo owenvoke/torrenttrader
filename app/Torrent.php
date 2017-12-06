@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Torrent.
- * @package App
  */
 class Torrent extends Model
 {

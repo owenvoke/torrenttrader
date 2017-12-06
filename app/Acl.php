@@ -5,8 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Acl
- * @package App
+ * Class Acl.
  */
 class Acl extends Model
 {

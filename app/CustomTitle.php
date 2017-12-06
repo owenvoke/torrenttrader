@@ -5,8 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class CustomTitle
- * @package App
+ * Class CustomTitle.
  */
 class CustomTitle extends Model
 {

@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 
 /**
  * Class UserTeam.
- * @package App
  */
 class UserTeam extends Pivot
 {
