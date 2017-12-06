@@ -8,8 +8,8 @@ $factory->define(App\TorrentTag::class, function (Faker $faker) {
         'torrent_id' => function () {
             return factory(App\Torrent::class)->create()->id;
         },
-        'tag_id' => function () {
+        'tag_id'     => function () {
             return factory(App\Tag::class)->create()->id;
-        }
+        },
     ];
 });

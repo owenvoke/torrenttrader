@@ -8,7 +8,7 @@ $factory->define(App\File::class, function (Faker $faker) {
         'torrent_id' => function () {
             return factory(\App\Torrent::class)->create()->id;
         },
-        'path' => $faker->file(),
-        'size' => mt_rand()
+        'path'       => $faker->file(),
+        'size'       => mt_rand(),
     ];
 });

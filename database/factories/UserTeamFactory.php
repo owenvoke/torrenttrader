@@ -10,6 +10,6 @@ $factory->define(App\UserTeam::class, function (Faker $faker) {
         },
         'team_id' => function () {
             return factory(App\Team::class)->create()->id;
-        }
+        },
     ];
 });
