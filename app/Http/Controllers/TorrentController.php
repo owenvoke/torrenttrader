@@ -15,7 +15,7 @@ class TorrentController extends Controller
     public function __construct()
     {
         $this->middleware('auth')
-            ->except(['index', 'show']);
+             ->except(['index', 'show']);
     }
 
     /**
@@ -28,7 +28,7 @@ class TorrentController extends Controller
         $torrents = Torrent::paginate(50);
 
         $data = [
-            'torrents' => $torrents
+            'torrents' => $torrents,
         ];
 
         return view('torrents.index', $data);
@@ -101,7 +101,7 @@ class TorrentController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  \App\Torrent $torrent
+     * @param  \App\Torrent             $torrent
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Torrent $torrent)
@@ -132,7 +132,7 @@ class TorrentController extends Controller
                     'category_id' => 'required|int',
                     'size'        => 'int',
                     'downloads'   => 'int',
-                    'user_id'     => 'required|int'
+                    'user_id'     => 'required|int',
                 ]);
                 break;
         }

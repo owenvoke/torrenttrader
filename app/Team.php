@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Team
+ * Class Team.
  * @package App
  */
 class Team extends Model

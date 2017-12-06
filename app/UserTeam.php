@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
 /**
- * Class UserTeam
+ * Class UserTeam.
  * @package App
  */
 class UserTeam extends Pivot

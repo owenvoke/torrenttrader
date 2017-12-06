@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
 /**
- * Class TorrentTag
+ * Class TorrentTag.
  * @package App
  */
 class TorrentTag extends Pivot
