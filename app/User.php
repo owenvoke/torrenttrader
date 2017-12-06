@@ -53,7 +53,7 @@ class User extends Authenticatable
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function custom_title()
+    public function customTitle()
     {
         return $this->belongsTo('App\CustomTitle');
     }
